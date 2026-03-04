@@ -78,7 +78,7 @@ nav a:hover {
 }
 
 /* Gallery */
-.gallery {
+/* .gallery {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 20px;
@@ -89,7 +89,7 @@ nav a:hover {
 	width: 200px;
 	border-radius: 4px;
 	object-fit: cover;
-}
+} */
 
 /* Video Section */
 .video-grid {
@@ -185,7 +185,7 @@ footer {
 }
 
 .row > .column {
-	padding: 0 8px;
+	padding: 0 0px;
 }
 
 .row::after {
@@ -202,7 +202,8 @@ footer {
 
 .column img {
 	width: 200px;
-	border-radius: 4px;
+	padding-inline: 2px;
+	border-radius: 8px;
 	object-fit: cover;
 }
 
