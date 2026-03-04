@@ -7,6 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="./css/one_page_website.css">
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+		<script src="js/one_page_website.js" defer></script>
 		
 		
   
@@ -29,74 +30,68 @@
 			<section class="panel">
 				<div id="gallery">
 					<h2>Gallery</h2>
-					<div class="gallery">
-					
-						<!-- PHOTO CONTAINER 1 -->
-						<div>
-							<div>
-								<img src="./images/thumb/motherboard.png" alt="Motherboard">
-								<div>
-									<h3>Click to enlarge</h3>
-									<p>Complete PC parts available!</p>
-								</div>
+					<!-- Images used to open the lightbox -->
+					<div class="row">
+						<div class="column">
+							<img src="images/thumb/plant1-small.png" onclick="openModal(); currentSlide(1)" class="hover-shadow">
+						</div>
+						<div class="column">
+							<img src="images/thumb/plant2-small.png" onclick="openModal(); currentSlide(2)" class="hover-shadow">
+						</div>
+						<div class="column">
+							<img src="images/thumb/plant3-small.png" onclick="openModal(); currentSlide(3)" class="hover-shadow">
+						</div>
+						<div class="column">
+							<img src="images/thumb/plant4-small.png" onclick="openModal(); currentSlide(4)" class="hover-shadow">
+						</div>
+					</div>
+
+					<!-- The Modal/Lightbox -->
+					<div id="myModal" class="modal">
+						<span class="close cursor" onclick="closeModal()">&times;</span>
+						<div class="modal-content">
+							<div class="mySlides">
+								<div class="numbertext"></div>
+								<img src="images/thumb/plant1.png" style="width: 100%;">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext"></div>
+								<img src="images/thumb/plant2.png" style="width: 100%;">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext"></div>
+								<img src="images/thumb/plant3.png" style="width: 100%;">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext"></div>
+								<img src="images/thumb/plant4.png" style="width: 100%;">
+							</div>
+							<!-- Next/previous controls -->
+							<a class="prev" onclick="plusSlides(-1)">&#10094</a>
+							<a class="next" onclick="plusSlides(1)">&#10095</a>
+
+							<!-- Caption text -->
+							<div class="caption-container">
+								<p id="caption"></p>
+							</div>
+
+							<!-- Thumbnail image controls -->
+							<div class="column">
+								<img class="demo" src="images/thumb/plant1.png" onclick="currentSlide(1)" alt="Pink Flower">
+							</div>
+							<div class="column">
+								<img class="demo" src="images/thumb/plant2.png" onclick="currentSlide(2)" alt="Sunflower">
+							</div>
+							<div class="column">
+								<img class="demo" src="images/thumb/plant3.png" onclick="currentSlide(3)" alt="Blue green Flower">
+							</div>
+							<div class="column">
+								<img class="demo" src="images/thumb/plant4.png" onclick="currentSlide(4)" alt="Mint Plant">
 							</div>
 						</div>
-						<!-- END PHOTO CONTAINER 1 -->
-						<!-- PHOTO CONTAINER 2 -->
-						<div>
-							<div>
-								<img src="./images/thumb/processor.png" alt="Processor">
-								<div>
-									<h3>Click to enlarge</h3>
-									<p>Complete PC parts available!</p>
-								</div>
-							</div>
-						</div>
-						<!-- END PHOTO CONTAINER 2 -->
-						<!-- PHOTO CONTAINER 3 -->
-						<div>
-							<div>
-								<img src="./images/thumb/memory.png" alt="Memory Card">
-								<div>
-									<h3>Click to enlarge</h3>
-									<p>Complete PC parts available!</p>
-								</div>
-							</div>
-						</div>
-						<!-- END PHOTO CONTAINER 3 -->
-						<!-- PHOTO CONTAINER 4 -->
-						<div>
-							<div>
-								<img src="./images/thumb/nvme_ssd.png" alt="NVME SSD Storage">
-								<div>
-									<h3>Click to enlarge</h3>
-									<p>Complete PC parts available!</p>
-								</div>
-							</div>
-						</div>
-						<!-- END PHOTO CONTAINER 4 -->
-						<!-- PHOTO CONTAINER 5 -->
-						<div>
-							<div>
-								<img src="./images/thumb/graphics_card.png" alt="Graphics Card">
-								<div>
-									<h3>Click to enlarge</h3>
-									<p>Complete PC parts available!</p>
-								</div>
-							</div>
-						</div>
-						<!-- END PHOTO CONTAINER 5 -->
-						<!-- PHOTO CONTAINER 6 -->
-						<div>
-							<div>
-								<img src="./images/thumb/power_supply.png" alt="Power Supply">
-								<div>
-									<h3>Click to enlarge</h3>
-									<p>Complete PC parts available!</p>
-								</div>
-							</div>
-						</div>
-						<!-- END PHOTO CONTAINER 6 -->
 					</div>
 				</div>
 			</section>
