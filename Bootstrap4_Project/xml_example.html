@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="XML_Example"></p>
+        <p id="XML_Example1"></p>
+        <script>
+            var XML_Parser, XML_Parser1, XML_Document, XML_Document1;
+
+            // creates a text string
+            var Movie = "<movie>" +
+                "<title>Schindler\'s List</title>" +
+                "<director>Steven Spielberg</director>" +
+                "<starring>Liam Neeson</starring>" +
+                "<year>1993</year>" +
+                "</movie>";
+
+            // creates an XML DOM parser
+            XML_Parser = new DOMParser();
+
+            // creates a new XML DOM object using the text string
+            XML_Document = XML_Parser.parseFromString(Movie, "text/html");
+
+            document.getElementById("XML_Example").innerHTML = 
+                XML_Document.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+            
+            var Employee = "<employees>" +
+                    "<employee>" +
+                        "<name>John Birch</name>" +
+                        "<salary>56000</salary>" +
+                        "<age>44</age>" +
+                    "</employee>" +
+                    "<employee>" +
+                        "<name>Shirley Temple</name>" +
+                        "<salary>95000</salary>" +
+                        "<age>8</age>" +
+                    "</employee>" +
+                "</employees>";
+
+            XML_Parser1 = new DOMParser();
+
+            // creates a new XML DOM object using the text string
+            XML_Document1 = XML_Parser1.parseFromString(Employee, "text/html");
+
+            document.getElementById("XML_Example1").innerHTML = 
+                XML_Document1.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+        </script>
+    </body>
+</html>
